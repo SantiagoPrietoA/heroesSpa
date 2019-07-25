@@ -1,0 +1,14 @@
+<h1>Héroes <small>Marvel y DC</small></h1>
+<hr>
+
+<div class="row" *ngIf="heroeFiltered.length == 0">
+    <div class="col-md-12">
+        <div class="alert alert-info">
+            No existen resultados para esta busqueda
+        </div>
+    </div>
+</div>
+
+<div class="card-columns">
+    <app-heroe-target [heroe]="heroe" [i]="heroe.idx" *ngFor="let heroe of heroeFiltered"></app-heroe-target>
+</div>
